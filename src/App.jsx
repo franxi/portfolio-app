@@ -1,11 +1,23 @@
+import {
+  Home,
+  About,
+  Education,
+  Skills,
+  Projects,
+  Contact,
+} from "./components";
 
 function App() {
-
   return (
     <>
-    <h1>HOLA MUNDO</h1>
+      <Home />
+      <About />
+      <Education />
+      <Skills />
+      <Projects />
+      <Contact />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
