@@ -6,7 +6,7 @@ import "./Home.css";
 const Home = () => {
   const { theme } = useContext(ThemeContext);
   return (
-    <div className="home">
+    <section id="home" className="home">
       <div className="home--container">
         <img
           src={homeData.image}
@@ -32,7 +32,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

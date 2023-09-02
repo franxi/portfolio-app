@@ -1,0 +1,33 @@
+.navbar {
+  background: linear-gradient(90deg, #ffc107, #ffd700);
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+  border-bottom-left-radius: 20px; /* Borde inferior izquierdo redondeado */
+  border-bottom-right-radius: 20px; /* Borde inferior derecho redondeado */
+}
+
+.navbar {
+  height: 6.5rem;
+  background-color: transparent;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: sticky;
+  top: 0; /* Agregado para especificar desde dónde se adhiere */
+}
+
+.navbar--container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 3rem;
+  margin-top: 1rem;
+  list-style: none;
+}
+
+.navbar--sections-active {
+  background-color: #007bff;
+  color: white;
+}

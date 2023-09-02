@@ -1,17 +1,28 @@
-import {contactData} from '../../data/contactData'
+import { contactData } from "../../data/contactData";
+import "./Contact.css";
+
+import { ThemeContext } from "../../context/ThemeContextProvider";
+import { useContext } from "react";
 
 const Contact = () => {
-  return (  
+  const { theme } = useContext(ThemeContext);
 
-    <div>
-      <h1>Contaco</h1>
-      <p>{contactData.email}</p>
-      <p>{contactData.phone}</p>
-      <p>{contactData.address}</p>
+  return (
+    <div
+      className="contact"
+      id="contact"
+      style={{ backgroundColor: theme.secondary }}
+    >
+      <div className="contact--container">
+        <h1 style={{ color: theme.primary }}>Contacts</h1>
+           <div className='contact-body'>
+        <p>{contactData.email}</p>
+        <p>{contactData.phone}</p>
+        <p>{contactData.address}</p>
+      </div>
+      </div>
     </div>
-
-
   );
-}
+};
 
-export default Contact ;
+export default Contact;

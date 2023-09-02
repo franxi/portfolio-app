@@ -1,16 +1,18 @@
 import {
+  NavBar,
   Home,
   About,
   Education,
   Skills,
   Projects,
-  Contact,
+  Contact
 } from "./components";
 import "./App.css";
 
 function App() {
   return (
     <section>
+      <NavBar />
       <Home />
       <About />
       <Education />
