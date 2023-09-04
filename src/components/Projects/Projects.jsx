@@ -10,7 +10,7 @@ const Projects = () => {
   return (
     <div
       className="projects"
-      id="projects"
+      id="proyectos"
       style={{ backgroundColor: theme.secondary }}
     >
       <div className="projects--header">

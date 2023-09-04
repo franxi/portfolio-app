@@ -4,9 +4,10 @@ import {
   About,
   Education,
   Skills,
-  Projects,
-  Contact
+  // Projects,
+  Contact,
 } from "./components";
+import ScrollToTopButton from "./utils/ScrollToTopButton";
 import "./App.css";
 
 function App() {
@@ -17,8 +18,9 @@ function App() {
       <About />
       <Education />
       <Skills />
-      <Projects />
+      {/* <Projects /> */}
       <Contact />
+      <ScrollToTopButton />
     </section>
   );
 }

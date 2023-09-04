@@ -1,73 +1,120 @@
 .home {
-  height: 100vh;
-  /* display: flex;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: center; */
-}
+  /* min-width: 100vh; */
+  background: radial-gradient(
+        circle,
+        transparent 20%,
+        #f1f1f1 20%,
+        #f1f1f1 80%,
+        transparent 80%,
+        transparent
+      )
+      0% 0% / 20px 20px,
+    radial-gradient(
+        circle,
+        transparent 20%,
+        #f1f1f1 20%,
+        #f1f1f1 80%,
+        transparent 80%,
+        transparent
+      )
+      10px 10px / 20px 20px,
+    linear-gradient(#ffca28 2px, transparent 2px) 0px -1px / 10px 10px,
+    linear-gradient(90deg, #ffca28 2px, #f1f1f1 2px) -1px 0px / 10px 10px #f1f1f1;
+  background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
+  background-color: #f1f1f1;
 
+}
 .home--container {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
-  position: relative;
+}
+.home--container-frame {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 900px;
+  height: 410px;
+  gap: 2rem;
+  background-color: #ffca28;
+  position: relative; /* Para que los pseudo-elementos se posicionen con respecto a este contenedor */
+}
+
+/* Borde en la esquina superior izquierda */
+.home--container-frame::before {
+  content: "";
+  position: absolute;
+  width: 10rem; /* Ancho del borde en la esquina */
+  height: 10rem; /* Alto del borde en la esquina */
+  border-left: 8px solid black;
+  border-top: 8px solid black;
+  top: 0;
+  left: 0;
+
+}
+
+/* Borde en la esquina inferior derecha */
+.home--container-frame::after {
+  content: "";
+  position: absolute;
+  width: 10rem; /* Ancho del borde en la esquina */
+  height: 10rem; /* Alto del borde en la esquina */
+  border-right: 8px solid black;
+  border-bottom: 8px solid black;
+  bottom: 0;
+  right: 0;
 }
 
 .home--img {
-  --img-size: 400px;
-  position: absolute;
-  left: 35%;
-  transform: translateX(-50%);
-  width: var(--img-size);
-  height: var(--img-size);
+  width: 300px;
+  height: 400px;
   object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
-  transition: opacity 0.3s;
 }
 
 .home--container-left {
-  flex: 35%;
-  height: 100%;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
+  flex: 50%;
+  /* height: 100%; */
+  justify-content: end;
+  align-items: center;
+  /* background-color: #eaeaea; */
 }
 
 .home--container-right {
-  flex: 65%;
+  flex: 50%;
   height: 100%;
-  background-color: #eaeaea;
+  /* background-color: #eaeaea; */
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   justify-content: center;
 }
 
 .lcr--content {
-  width: 45%;
-  margin-right: 7rem;
+  width: 80%;
+  /* margin-left: 3rem; */
   font-family: var(--primaryFont);
-  font-style: normal;
+  color: #000;
 }
 
 .lcr--content h6 {
   font-weight: 500;
   font-size: 1.25rem;
   margin-bottom: -0.85rem;
-  opacity: 0.8;
 }
 
 .lcr--content h1 {
   font-weight: 600;
-  font-size: 3.25rem;
-  line-height: 110%;
-  margin: 1rem 0;
+  font-size: 2.5rem;
 }
 
 .lcr--content p {
   margin-top: 1.45rem;
   font-weight: 500;
-  font-size: 1.15rem;
-  opacity: 0.7;
+  font-size: 1.15rem;  
 }

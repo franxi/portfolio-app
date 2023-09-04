@@ -1,28 +1,51 @@
 .education {
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+        circle,
+        transparent 20%,
+        #ffca28 20%,
+        #ffca28 80%,
+        transparent 80%,
+        transparent
+      )
+      0% 0% / 20px 20px,
+    radial-gradient(
+        circle,
+        transparent 20%,
+        #ffca28 20%,
+        #ffca28 80%,
+        transparent 80%,
+        transparent
+      )
+      10px 10px / 20px 20px,
+    linear-gradient(#f1f1f1 2px, transparent 2px) 0px -1px / 10px 10px,
+    linear-gradient(90deg, #f1f1f1 2px, #ffca28 2px) -1px 0px / 10px 10px #ffca28;
+  background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
+  background-color: #ffca28;
 }
 .education-body {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
 .education-description {
-  width: 100%;
-  flex: 0.65;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
-  margin-left: 7%;
+  align-items: center;
+  width: 900px;
+  height: 410px;
 }
 
 .education-description > h1 {
-  font-size: 3.5rem;
-  font-family: var(--primaryFont);
-  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 110%;
+  margin: 1rem 0;
 }
 
 .education-card {
@@ -35,7 +58,12 @@
   padding: 1.5rem;
   border-radius: 20px;
   margin-bottom: 1.5rem;
+  background-color: #f1f1f1;
   transition: background-color 200ms ease-in-out;
+}
+
+.education-card:hover {
+  background-color: #ffca28;
 }
 
 .education-details {

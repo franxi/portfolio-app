@@ -1,9 +1,7 @@
-import profilePicture from "../assets/images/francisco.png";
-
+import { profilePicture } from "../theme/images";
 export const homeData = {
-  name: "Jane Doe",
-  title: "Web Developer",
-  desciption:
-    "There wasn't a bird in the sky, but that was not what caught her attention. It was the clouds. The deep green that isn't the color of clouds, but came with these. She knew what was coming and she hoped she was prepared. ",
+  name: "Francisco González",
+  title: "Ing. Civil en Informática",
+  desciption: "¡Es un placer tenerte aquí! Te cuento, estoy en la etapa final de mi carrera profesional. ¿Tienes algún consejo o sugerencia? ¡Te agradecería que me lo compartieras!",
   image: profilePicture,
 };

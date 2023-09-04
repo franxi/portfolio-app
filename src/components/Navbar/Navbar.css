@@ -1,33 +1,92 @@
 .navbar {
-  background: linear-gradient(90deg, #ffc107, #ffd700);
-  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2); /* Sombra */
-  border-bottom-left-radius: 20px; /* Borde inferior izquierdo redondeado */
-  border-bottom-right-radius: 20px; /* Borde inferior derecho redondeado */
-}
-
-.navbar {
-  height: 6.5rem;
-  background-color: transparent;
-  z-index: 99;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 4rem;
   width: 100%;
-  position: sticky;
-  top: 0; /* Agregado para especificar desde dónde se adhiere */
+  position: fixed;
+  z-index: 100;
+  background: linear-gradient(90deg, #ffc107, #ffd700);
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+  border-bottom-left-radius: 10px; /*Borde inferior izquierdo redondeado */
+  border-bottom-right-radius: 10px; /* Borde inferior derecho redondeado */
 }
 
 .navbar--container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
-  padding: 0 3rem;
-  margin-top: 1rem;
+  padding: 1rem;
   list-style: none;
 }
 
-.navbar--sections-active {
-  background-color: #007bff;
-  color: white;
+.navbar--logo {
+  margin-right: auto; /* Empujar el primer elemento al principio */
+}
+
+.navbar--menu {
+  display: flex;
+  gap: 1rem; /* Espacio entre los elementos del menú */
+
+}
+
+.navbar--logo-edit {
+  width: 100px;
+  height: 70px;
+}
+
+.navbar--logo-edit {
+  fill: #000000;
+  stroke: none;
+}
+
+.navbar--logo:hover .navbar--logo-up {
+  transform: translateY(50%) translateX(-25%); /* Desplaza solo hacia abajo un 10% y no hacia los lados */
+  transition: transform 0.1s ease-in; /* Agrega una transición suave solo a la propiedad transform */
+}
+
+.navbar--logo:hover .navbar--logo-down {
+  transform: translateY(-50%) translateX(25%); /* Desplaza solo hacia abajo un 10% y no hacia los lados */
+  transition: transform 0.1s ease-in; /* Agrega una transición suave solo a la propiedad transform */
+}
+
+/* BUTTON */
+.navbar--button {
+  /* font-family: var(--primaryFont); */
+  /* font-size: 0.8rem;
+  font-weight: 600; */
+  color: #000000;
+  background: transparent;
+  border: none;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: end; */
+  /* gap: 5px; */
+  position: relative;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.navbar--button:hover {
+  background-color: #ffc506;
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in;
+}
+
+.navbar--button:before {
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  transition: 0.5s ease;
+}
+
+.navbar--button-active::before {
+  position: absolute;
+  background-color: #000000;
+}
+
+.navbar--button-active::before {
+  width: 100%;
 }

@@ -1,19 +1,19 @@
-import { useContext } from "react";
-import { ThemeContext } from "../../context/ThemeContextProvider";
+// import { useContext } from "react";
+// import { ThemeContext } from "../../context/ThemeContextProvider";
 
 import "./Education.css";
 
 const EducationCard = ({ id, institution, course, startYear, endYear }) => {
-  const { theme } = useContext(ThemeContext);
+  // const { theme } = useContext(ThemeContext);
 
   return (
     <div key={id} className="education-card">
       <div className="education-details">
-        <h6 style={{ color: theme.primary }}>
+        <h6>
           {startYear}-{endYear}
         </h6>
-        <h4 style={{ color: theme.primary }}>{course}</h4>
-        <h5 style={{ color: theme.primary }}>{institution}</h5>
+        <h4>{course}</h4>
+        <h5>{institution}</h5>
       </div>
     </div>
   );

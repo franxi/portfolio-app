@@ -1,23 +1,16 @@
 export const educationData = [
   {
-      id: 1,
-      institution: 'Marble Hills Middle School',
-      course: 'Higher Secondary Education',
-      startYear: '2007',
-      endYear: '2015'
+    id: 1,
+    institution: "Universidad del Bío-Bío",
+    course: "Grado Académico: Licenciado en Ciencias de la Ingeniería",
+    startYear: "2018",
+    endYear: "2021",
   },
   {
-      id: 2,
-      institution: 'Somerset School of Science',
-      course: 'Bachelor of Technology',
-      startYear: '2015',
-      endYear: '2019'
+    id: 2,
+    institution: "Universidad del Bío-Bío",
+    course: "Titulo Profesional: Ingeniería Civil en Informática",
+    startYear: "2018",
+    endYear: "2023",
   },
-  {
-      id: 3,
-      institution: 'Hawking University, Cambridge',
-      course: 'Master of Technology',
-      startYear: '2019',
-      endYear: 'Present'
-  },
-]
+];

@@ -2,15 +2,20 @@ import { useState, useEffect } from "react";
 
 const useActiveSection = (sectionIds) => {
   const [activeSection, setActiveSection] = useState(null);
+  const navbarHeight = 65;
 
   useEffect(() => {
     const checkActiveSection = () => {
-      let currentActive = 'null';
+      let currentActive = "null";
 
       sectionIds.forEach((id) => {
         const element = document.getElementById(id);
         const rect = element.getBoundingClientRect();
-        if (rect.top <= 0 && rect.bottom >= 0) {
+        // if (rect.top <= 0 && rect.bottom >= 0) {
+        //   currentActive = id;
+        // }
+        // Ajusta el cálculo considerando la altura del navbar fijo
+        if (rect.top - navbarHeight <= 0 && rect.bottom - navbarHeight >= 0) {
           currentActive = id;
         }
       });
@@ -38,8 +43,3 @@ export default useActiveSection;
 // Al final del bucle, setActiveSection(currentActive) actualiza el estado activeSection con el id de la sección que está activa (visible en la ventana) o null si no hay ninguna.
 
 // Por lo tanto, sí, checkActiveSection se ejecuta en su totalidad cada vez que cambia el scroll, recorriendo todos los id en sectionIds para determinar cuál sección es la que está activa en ese momento.
-
-
-
-
-

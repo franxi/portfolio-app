@@ -1,21 +1,22 @@
-import { useContext } from "react";
-import { ThemeContext } from "../../context/ThemeContextProvider";
+// import { useContext } from "react";
+// import { ThemeContext } from "../../context/ThemeContextProvider";
 import { educationData } from "../../data/educationData";
 import EducationCard  from "./EducationCard";
 import "./Education.css";
 
 const Education = () => {
-  const {theme} = useContext(ThemeContext);
+  // const {theme} = useContext(ThemeContext);
   return (
-    <div id="education" className="edcuation">
+    <div id="educación" className="education">
       <div className="education-body">
         <div className="education-description">
-          <h2 style={{ color: theme.primary }}>Education</h2>
+        <div className="lcr--content">
+          <h1>Education</h1>
           <ul>
-            {educationData.map((edu, index) => (
+            {educationData.map((edu) => (
               <EducationCard
-                key={index}
-                id={index}
+                key={edu.id}
+                id={edu.id}
                 institution={edu.institution}
                 course={edu.course}
                 startYear={edu.startYear}
@@ -23,6 +24,7 @@ const Education = () => {
               />
             ))}
           </ul>
+        </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,22 @@
+/* Estilos para el botón de regreso al principio */
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 20px; /* Ajusta la distancia desde la parte inferior según tus preferencias */
+  right: 20px; /* Ajusta la distancia desde la derecha según tus preferencias */
+  background-color: #ffca28; /* Color de fondo del botón */
+  border: 5px solid #f1f1f1f1;
+  /* border: none; */
+  border-radius: 100%; /* Hace que el botón sea redondo */
+  padding: 5px 8px;
+  cursor: pointer;
+  /* transition: background-color 0.3s, transform 0.3s; */
+}
+.scroll-to-top-button:hover {
+  background-color: #f1f1f1; /* Color de fondo del botón */
+  border: 5px solid #ffca28;
+}
+/* 
+.scroll-to-top-button:focus {
+  outline: none; 
+  
+} */

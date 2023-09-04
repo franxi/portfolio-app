@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <div
       className="contact"
-      id="contact"
+      id="contacto"
       style={{ backgroundColor: theme.secondary }}
     >
       <div className="contact--container">
