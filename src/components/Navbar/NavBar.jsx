@@ -17,8 +17,6 @@ const NavBar = () => {
     }
   };
 
-
-
   return (
     <nav className="navbar">
       <ul className="navbar--container">
@@ -26,10 +24,7 @@ const NavBar = () => {
           <a href="home">
             <svg
               className="navbar--logo-edit"
-              version="1.0"
-              xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 500.000000 500.000000"
-              preserveAspectRatio="xMidYMid meet"
             >
               <g
                 className="navbar--logo-color"

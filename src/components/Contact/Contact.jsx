@@ -1,27 +1,88 @@
-import { contactData } from "../../data/contactData";
-import "./Contact.css";
-
-import { ThemeContext } from "../../context/ThemeContextProvider";
 import { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContextProvider";
+import { contactData } from "../../data/contactData";
+import EmailIcon from "@mui/icons-material/Email";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import "./Contact.css";
 
 const Contact = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div
+    <section
       className="contact"
       id="contacto"
-      style={{ backgroundColor: theme.secondary }}
+      style={{
+        background: theme.backgroundThird,
+        backgroundColor: theme.secondary,
+        backgroundSize: theme.backgroundThirdSize,
+      }}
     >
-      <div className="contact--container">
-        <h1 style={{ color: theme.primary }}>Contacts</h1>
-           <div className='contact-body'>
-        <p>{contactData.email}</p>
-        <p>{contactData.phone}</p>
-        <p>{contactData.address}</p>
-      </div>
-      </div>
-    </div>
+      <article className="contact--container">
+        <div
+          className="contact--container-main"
+          style={{ backgroundColor: theme.secondary }}
+        >
+          <header className="contact--container-title">
+            <h1>Contacto</h1>
+          </header>
+          <div className="contact--container-body">
+            <h6>
+              ¡Hablemos de tu próximo proyecto! ¿Estás listo para llevar tus
+              ideas al siguiente nivel? Estoy emocionado por conocer más sobre
+              tu proyecto y cómo puedo ayudarte a hacerlo realidad. Como
+              desarrollador web apasionado, estoy comprometido a crear
+              soluciones digitales bonitas y funcionales que impulsen tu éxito
+              en línea.
+            </h6>
+            <div className="contact--menu">
+              <a
+                className="contact--menu-item"
+                href={`mailto:${contactData.email}`}
+              >
+                <EmailIcon />
+              </a>
+
+              <a
+                className="contact--menu-item"
+                href={`mailto:${contactData.email}`}
+              >
+                <WhatsAppIcon />
+              </a>
+              <a
+                className="contact--menu-item"
+                href={`mailto:${contactData.email}`}
+              >
+                <InstagramIcon />
+              </a>
+              <a
+                className="contact--menu-item"
+                href={`mailto:${contactData.email}`}
+              >
+                <TwitterIcon />
+              </a>
+              <a
+                className="contact--menu-item"
+                href={`mailto:${contactData.email}`}
+              >
+                <LinkedInIcon />
+              </a>
+            </div>
+
+            {/* <p>{contactData.phone}</p>
+          <p>{contactData.address}</p> */}
+          </div>
+        </div>
+      </article>
+      <footer className="contact-footer">
+        <div>
+          <p>© 2023 Francisco Gonzalez | Ing. Civil en Informática</p>
+        </div>
+      </footer>
+    </section>
   );
 };
 

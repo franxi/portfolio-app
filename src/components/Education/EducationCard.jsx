@@ -1,21 +1,16 @@
-// import { useContext } from "react";
-// import { ThemeContext } from "../../context/ThemeContextProvider";
-
 import "./Education.css";
 
 const EducationCard = ({ id, institution, course, startYear, endYear }) => {
-  // const { theme } = useContext(ThemeContext);
-
   return (
-    <div key={id} className="education-card">
+    <li key={id} className="education-card">
       <div className="education-details">
-        <h6>
+        <p>
           {startYear}-{endYear}
-        </h6>
-        <h4>{course}</h4>
-        <h5>{institution}</h5>
+        </p>
+        <h6>{course}</h6>
+        <p>{institution}</p>
       </div>
-    </div>
+    </li>
   );
 };
 

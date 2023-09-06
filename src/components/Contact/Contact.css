@@ -1,34 +1,106 @@
 .contact {
   min-height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+}
+.contact--container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.contact--container-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--primaryFont);
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 900px;
+  height: 410px;
+}
+
+.contact--container-title {
+  font-size: var(--fontTitleSize);
+  font-weight: var(--fontTitleWeight);
+  text-align: start;
+  width: 80%;
+  margin-bottom: var(--marginTitle);
+}
+
+.contact--container-body {
+  width: 80%;
+}
+.contact--container-body p {
+  font-size: var(--fontParagraphSize);
+  font-weight: var(--fontParagraphWeight);
+}
+
+.contact--container-body h6 {
+  font-size: var(--fontSubtitleSize);
+  font-weight: var(--fontSubtitleWeight);
+  margin-bottom: var(--marginTitle);
+  /* margin-bottom: -0.6rem; */
+}
+
+.contact--menu {
+  display: flex;
+  gap: 1rem; /* Espacio entre los elementos del menú */
+  justify-content: center;
+}
+
+.contact--menu-item {
+  color: black;
+  background: transparent;
+  border: none;
+  position: relative;
+  transition: 0.5s ease;
+  cursor: pointer;
+  padding: 0.2rem;
   position: relative;
 }
 
-.contact--container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 2rem 6rem 3rem;
-  width: 80%;
-  height: 100%;
-  margin-top: 2rem;
+.contact--menu-item:hover {
+  background-color: var(--secondaryColorDark);
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in;
 }
 
-.contact--container > h1 {
-  font-family: var(--primaryFont);
-  font-size: 3.5rem;
-  margin-bottom: 2.5rem;
-
+/* Borde en la esquina superior izquierda */
+.contact--menu-item:hover::before {
+  content: "";
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-left: 2px solid var(--frameColor);
+  border-top: 2px solid var(--frameColor);
+  top: 0;
+  left: 0;
 }
 
-.contacts-body {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+/* Borde en la esquina inferior derecha */
+.contact--menu-item:hover::after {
+  content: "";
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid var(--frameColor);
+  border-bottom: 2px solid var(--frameColor);
+  bottom: 0;
+  right: 0;
+}
+
+.contact-footer {
+  text-align: center;
+  background-color: #333; /* Color de fondo del footer */
+  color: white; /* Color de texto del footer */
+  /* position: absolute;
+  bottom: 0;
+  left: 0; */
   width: 100%;
 }

@@ -1,63 +1,116 @@
 .skills {
   min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
-/* .skillsHeader {
+.skills-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.skillsHeader h2 {
-  font-family: var(--primaryFont);
-  font-style: normal;
-  font-weight: bold;
-  font-size: 3.5rem;
-  text-align: center;
-} */
-
-.skillsContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 3.5rem;
-}
-
-/* .skills-card {
-  width: 115px;
-  padding: 10px;
-  font-size: 1.4rem;
-  letter-spacing: 1px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
   flex-direction: column;
-  border: 1px solid var(--dark-gray);
-  gap: 10px;
-  background-color: rgba(24, 31, 42, 0.5);
-  transition: all 0.1s linear;
-  box-shadow: 6px 6px 6px #141b25;
-  border-radius: 10px;
-} */
-.skill-card-container {
-  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--primaryFont);
+  width: 900px;
+  /* height: 410px; */
 }
-.html {
-  display: flex;
 
-  fill: red;
+.skills-container-title {
+  font-size: var(--fontTitleSize);
+  font-weight: var(--fontTitleWeight);
+  margin-bottom: var(--marginTitle);
+  width: 80%;
+}
+
+.skills-container-list {
+  width: 80%;
+}
+
+.skills-container-list > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+/* Componente skill */
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+  width: 115px;
+  padding: 1rem;
+  list-style: none;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+  background-color: var(--primaryColor);
+  position: relative;
+ 
+}
+
+
+/* Borde en la esquina superior izquierda */
+.skill-card:hover::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border-left: 3px solid var(--frameColor);
+  border-top: 3px solid var(--frameColor);
+  top: 0;
+  left: 0;
+}
+
+/* Borde en la esquina inferior derecha */
+.skill-card:hover::after {
+  content: "";
+  position: absolute;
+  width: 2rem; 
+  height: 2rem;
+  border-right: 3px solid var(--frameColor);
+  border-bottom: 3px solid var(--frameColor);
+  bottom: 0;
+  right: 0;
+}
+.skill-card:hover {
+  background-color: var(--secondaryColor);
+  transform: scale(1.07);
+  transition: transform 0.1s ease-in;
+}
+
+/* .skill-card:hover::after{ 
+  border-right: 4px solid var(--frameColor);
+  border-bottom: 4px solid var(--frameColor); 
+  transform: translateY(20%) translateX(20%);
+  transition: transform 0.2s ease-in; 
+} 
+
+skill-card:hover::before{ 
+   border-left: 4px solid var(--frameColor);
+  border-top: 4px solid var(--frameColor); 
+
+  transform: translateY(-20%) translateX(-20%);
+  transition: transform 0.2s ease-in; 
+}  */
+
+.skill-card > h6 {
+  font-size: var(--fontSubtitleSize);
+  font-weight: var(--fontSubtitleWeight);
+}
+
+.skill-card-svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   width: 100px;
   height: 100px;
-}
-
-.svg-image {
-  /* Tus estilos CSS aquí */
-  width: 150px; /* Ejemplo: ajusta el ancho de la imagen */
-  height: 150px; /* Ejemplo: ajusta la altura de la imagen */
-  fill: red; /* Ejemplo: cambia el color del SVG (si el SVG utiliza fill) */
-  /* Otros estilos según tus necesidades */
-  color: red;
 }

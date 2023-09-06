@@ -31,13 +31,9 @@
 }
 
 .navbar--logo-edit {
+  fill: #000000;
   width: 100px;
   height: 70px;
-}
-
-.navbar--logo-edit {
-  fill: #000000;
-  stroke: none;
 }
 
 .navbar--logo:hover .navbar--logo-up {
@@ -68,12 +64,12 @@
 }
 
 .navbar--button:hover {
-  background-color: #ffc506;
+  background-color: var(--primaryColorDark);
   transform: scale(1.1);
   transition: transform 0.2s ease-in;
 }
 
-.navbar--button:before {
+.navbar--button::before {
   content: "";
   left: 0;
   bottom: 0;

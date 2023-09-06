@@ -1,33 +1,42 @@
-// import { useContext } from "react";
-// import { ThemeContext } from "../../context/ThemeContextProvider";
+import { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContextProvider";
 import { educationData } from "../../data/educationData";
-import EducationCard  from "./EducationCard";
+import EducationCard from "./EducationCard";
 import "./Education.css";
 
 const Education = () => {
-  // const {theme} = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   return (
-    <div id="educación" className="education">
-      <div className="education-body">
-        <div className="education-description">
-        <div className="lcr--content">
-          <h1>Education</h1>
-          <ul>
-            {educationData.map((edu) => (
-              <EducationCard
-                key={edu.id}
-                id={edu.id}
-                institution={edu.institution}
-                course={edu.course}
-                startYear={edu.startYear}
-                endYear={edu.endYear}
-              />
-            ))}
-          </ul>
-        </div>
-        </div>
-      </div>
-    </div>
+    <section
+      id="educación"
+      className="education"
+      style={{
+        background: theme.backgroundPrimary,
+        backgroundColor: theme.primary,
+        backgroundSize: theme.backgroundPrimarySize,
+      }}
+    >
+      <article className="education-container">
+
+          <header className="education-container-title">
+            <h1>Educación</h1>
+          </header>
+          <div className="education-container-list">
+            <ul>
+              {educationData.map((edu) => (
+                <EducationCard
+                  key={edu.id}
+                  id={edu.id}
+                  institution={edu.institution}
+                  course={edu.course}
+                  startYear={edu.startYear}
+                  endYear={edu.endYear}
+                />
+              ))}
+            </ul>
+          </div>
+      </article>
+    </section>
   );
 };
 

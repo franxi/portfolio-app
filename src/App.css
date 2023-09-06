@@ -1,7 +1,40 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Patrick+Hand+SC&display=swap"); */
+
 :root {
-  --primaryFont: 'Crimson Text', serif;
+  --primaryFont: "Crimson Text", serif;
   /* --primaryFont: 'Montserrat', sans-serif; */
   /* --primaryFont: 'Raleway', sans-serif; */
+  /* Tamaño de los textos */
+  
+  --fontTitleSize: 2.5rem;
+  --fontTitleWeight: 700;
+  
+  /* font-size: var(--fontTitleSize);
+  font-weight: var(--fontTitleWeight); */
+
+
+  --fontSubtitleSize: 1.25rem;
+  --fontSubtitleWeight: 600;
+
+  --fontSmallTitleSize: 1rem;
+  --fontSmallTitleWeight: 400;
+
+  /* font-size: var(--fontSubtitleSize);
+  font-weight: var(--fontSubtitleWeight); */
+
+  --fontParagraphSize: 1.15rem;
+  --fontParagraphWeight: 400;
+
+  --marginTitle: 1.4rem;
+  /* margin-top: var(--marginParagraph); 
+  font-size: var(--fontParagraphSize);
+  font-weight: var(--fontParagraphWeight); */
+
+  --primaryColor:#FFCA28;
+  --primaryColorDark:#FFC506;
+  --secondaryColor: #F1F1F1;
+  --secondaryColorDark: #E0E0E0;
+  --frameColor: #000000;
 }
 /* 
 font-family: 'Crimson Text', serif;

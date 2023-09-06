@@ -3,30 +3,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* min-width: 100vh; */
-  background: radial-gradient(
-        circle,
-        transparent 20%,
-        #f1f1f1 20%,
-        #f1f1f1 80%,
-        transparent 80%,
-        transparent
-      )
-      0% 0% / 20px 20px,
-    radial-gradient(
-        circle,
-        transparent 20%,
-        #f1f1f1 20%,
-        #f1f1f1 80%,
-        transparent 80%,
-        transparent
-      )
-      10px 10px / 20px 20px,
-    linear-gradient(#ffca28 2px, transparent 2px) 0px -1px / 10px 10px,
-    linear-gradient(90deg, #ffca28 2px, #f1f1f1 2px) -1px 0px / 10px 10px #f1f1f1;
-  background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
-  background-color: #f1f1f1;
-
 }
 .home--container {
   display: flex;
@@ -39,37 +15,40 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   width: 900px;
   height: 410px;
   gap: 2rem;
-  background-color: #ffca28;
-  position: relative; /* Para que los pseudo-elementos se posicionen con respecto a este contenedor */
+  /* position: relative;  */
+  /* Para que los pseudo-elementos se posicionen con respecto a este contenedor */
+
 }
 
 /* Borde en la esquina superior izquierda */
-.home--container-frame::before {
+/* .home--container-frame::before {
   content: "";
   position: absolute;
-  width: 10rem; /* Ancho del borde en la esquina */
-  height: 10rem; /* Alto del borde en la esquina */
-  border-left: 8px solid black;
-  border-top: 8px solid black;
+  width: 10rem; 
+  height: 10rem;
+  border-left: 8px solid var(--frameColor);
+  border-top: 8px solid var(--frameColor);
   top: 0;
   left: 0;
-
-}
+} */
 
 /* Borde en la esquina inferior derecha */
-.home--container-frame::after {
+/* .home--container-frame::after {
   content: "";
   position: absolute;
-  width: 10rem; /* Ancho del borde en la esquina */
-  height: 10rem; /* Alto del borde en la esquina */
-  border-right: 8px solid black;
-  border-bottom: 8px solid black;
+  width: 10rem; 
+  height: 10rem;
+  border-right: 8px solid var(--frameColor);
+  border-bottom: 8px solid var(--frameColor);
   bottom: 0;
   right: 0;
-}
+} */
 
 .home--img {
   width: 300px;
@@ -80,41 +59,36 @@
 .home--container-left {
   display: flex;
   flex: 50%;
-  /* height: 100%; */
   justify-content: end;
   align-items: center;
-  /* background-color: #eaeaea; */
 }
 
 .home--container-right {
   flex: 50%;
   height: 100%;
-  /* background-color: #eaeaea; */
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.lcr--content {
-  width: 80%;
-  /* margin-left: 3rem; */
+.home--container-text {
   font-family: var(--primaryFont);
-  color: #000;
+  width: 80%;
 }
 
-.lcr--content h6 {
-  font-weight: 500;
-  font-size: 1.25rem;
-  margin-bottom: -0.85rem;
+.home--container-text h6 {
+  font-size: var(--fontSubtitleSize);
+  font-weight: var(--fontSubtitleWeight);
+  /* margin-bottom: -0.6rem; */
 }
 
-.lcr--content h1 {
-  font-weight: 600;
-  font-size: 2.5rem;
+.home--container-text h1 {
+  font-size: var(--fontTitleSize);
+  font-weight: var(--fontTitleWeight);
+  margin-bottom: var(--marginTitle);
 }
 
-.lcr--content p {
-  margin-top: 1.45rem;
-  font-weight: 500;
-  font-size: 1.15rem;  
+.home--container-text p {
+  font-size: var(--fontParagraphSize);
+  font-weight: var(--fontParagraphWeight);
 }

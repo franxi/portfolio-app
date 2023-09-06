@@ -8,21 +8,21 @@ const About = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div id="perfil" className="about">
-      <div className="about-body">
-        <div className="about-description">
-          <div className="lcr--content">
-            <h1>{aboutData.title} </h1>
-            <p style={{ color: theme.tertiary80 }}>
-              {aboutData.description1}
-              <br />
-              <br />
-              {aboutData.description2}
-            </p>
-          </div>
+    <section
+      id="perfil"
+      className="about"
+      style={{ backgroundColor: theme.secondary }}
+    >
+      <article className="about--container">
+        <header className="about--container-title">
+          <h1>{aboutData.title} </h1>
+        </header>
+        <div className="about--container-body">
+          <p>{aboutData.description1}</p>
+          <p>{aboutData.description2}</p>
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
   );
 };
 
