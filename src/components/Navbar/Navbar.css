@@ -3,31 +3,28 @@
   align-items: center;
   justify-content: center;
   height: 4rem;
-  width: 100%;
+  min-width: 100vw;
   position: fixed;
-  z-index: 100;
+  z-index: 999;
   background: linear-gradient(90deg, #ffc107, #ffd700);
   box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2); /* Sombra */
-  border-bottom-left-radius: 10px; /*Borde inferior izquierdo redondeado */
-  border-bottom-right-radius: 10px; /* Borde inferior derecho redondeado */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; 
 }
 
 .navbar--container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   padding: 1rem;
   list-style: none;
-}
 
-.navbar--logo {
-  margin-right: auto; /* Empujar el primer elemento al principio */
 }
 
 .navbar--menu {
   display: flex;
   gap: 1rem; /* Espacio entre los elementos del menú */
-
 }
 
 .navbar--logo-edit {
@@ -48,16 +45,9 @@
 
 /* BUTTON */
 .navbar--button {
-  /* font-family: var(--primaryFont); */
-  /* font-size: 0.8rem;
-  font-weight: 600; */
   color: #000000;
   background: transparent;
   border: none;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: end; */
-  /* gap: 5px; */
   position: relative;
   transition: 0.5s ease;
   cursor: pointer;
@@ -85,4 +75,32 @@
 
 .navbar--button-active::before {
   width: 100%;
+}
+
+.navbar--button-mode{
+  width:100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 3rem;
+  }
+  .navbar--container {
+    padding: 0.5rem;
+  }
+  .navbar--menu {
+    /* display: flex; */
+    gap: 0.4rem; /* Espacio entre los elementos del menú */
+  }
+  .navbar--logo-edit{
+    width: 70px;
+    height: 50px;
+  }
+  .navbar--button-mode{
+    width: 70px;
+    height: 50px;
+  }
 }

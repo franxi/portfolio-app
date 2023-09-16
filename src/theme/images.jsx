@@ -1,4 +1,4 @@
 import profilePicture from "../assets/png/francisco.png";
-// import logoNavBar from "../assets/svg/logo/FG.svg";
+import logoUBB from "../assets/png/logo_ubb.png";
 
-export {profilePicture };
+export {profilePicture,logoUBB };

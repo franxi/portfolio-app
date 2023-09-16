@@ -1,20 +1,25 @@
 // import { ThemeContext } from "../../context/ThemeContextProvider";
 // import { useContext } from "react";
+import { useRef } from "react";
+import useFadeIn from "../Transition/useFadeIn";
 
 import "./Skills.css";
 
-const SkillsCard = ({ id, name, skillSvg }) => {
-  
+const SkillsCard = ({ id, name, skillSvg, url }) => {
   // const { theme } = useContext(ThemeContext);
+  const cardRef = useRef(null);
+  const isVisible = useFadeIn(cardRef);
 
   return (
     <li
       key={id}
-      className="skill-card"
-      // style={{ backgroundColor: theme.primary }}
+      className={`skill-card ${isVisible ? "fadeIn" : ""}`}
+      ref={cardRef}
     >
-      <span className="skill-card-svg">{skillSvg}</span>
-      <h6>{name}</h6>
+      <a href={url} target="_blank" className="skill-card-svg">
+        {skillSvg}
+      </a>
+      <h2>{name}</h2>
     </li>
   );
 };

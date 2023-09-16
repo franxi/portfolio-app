@@ -3,16 +3,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden
 }
 
 .skills-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   font-family: var(--primaryFont);
-  width: 900px;
+  width: 920px;
+
   /* height: 410px; */
 }
 
@@ -44,62 +47,38 @@
   align-items: center;
   justify-content: center;
   letter-spacing: 1px;
-  width: 115px;
+  width: 128px;
   padding: 1rem;
   list-style: none;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
-
   box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2); /* Sombra */
   background-color: var(--primaryColor);
   position: relative;
- 
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 1s ease, transform 0.5s ease;
+}
+
+.skill-card.fadeIn {
+  opacity: 1;
+  transform: translateX(0);
+  /* transition-delay: 10s;  */
+}
+
+.skill-card:hover {
+  background-color: var(--secondaryColor);
+  transform: scale(1.07);
+  transition-delay: 0s; /* Eliminar cualquier retraso en hover */
 }
 
 
-/* Borde en la esquina superior izquierda */
-.skill-card:hover::before {
-  content: "";
-  position: absolute;
-  width: 2rem;
-  height: 2rem;
-  border-left: 3px solid var(--frameColor);
-  border-top: 3px solid var(--frameColor);
-  top: 0;
-  left: 0;
-}
-
-/* Borde en la esquina inferior derecha */
-.skill-card:hover::after {
-  content: "";
-  position: absolute;
-  width: 2rem; 
-  height: 2rem;
-  border-right: 3px solid var(--frameColor);
-  border-bottom: 3px solid var(--frameColor);
-  bottom: 0;
-  right: 0;
-}
 .skill-card:hover {
   background-color: var(--secondaryColor);
   transform: scale(1.07);
   transition: transform 0.1s ease-in;
 }
 
-/* .skill-card:hover::after{ 
-  border-right: 4px solid var(--frameColor);
-  border-bottom: 4px solid var(--frameColor); 
-  transform: translateY(20%) translateX(20%);
-  transition: transform 0.2s ease-in; 
-} 
-
-skill-card:hover::before{ 
-   border-left: 4px solid var(--frameColor);
-  border-top: 4px solid var(--frameColor); 
-
-  transform: translateY(-20%) translateX(-20%);
-  transition: transform 0.2s ease-in; 
-}  */
 
 .skill-card > h6 {
   font-size: var(--fontSubtitleSize);

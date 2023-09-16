@@ -1,20 +1,27 @@
 // import { useContext } from "react";
 // import { ThemeContext } from "../../context/ThemeContextProvider";
+import { useState } from "react";
 import useActiveSection from "./useActiveSection";
-import { sectionsData } from "../../data/sectionsData";
-import { sectionsIconsData } from "../../data/sectionsData";
+import { navData, navIconsData, navMode } from "../../data/navData";
 import "./Navbar.css";
 
 const NavBar = () => {
   // const { theme } = useContext(ThemeContext);
 
-  const activeSection = useActiveSection(sectionsData);
+  const activeSection = useActiveSection(navData);
+
   //si hago click me redirige a ese lugar
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const [lightMode, setLightMode] = useState(true);
+
+  const toggleMode = () => {
+    setLightMode((prevState) => !prevState);
   };
 
   return (
@@ -69,7 +76,7 @@ const NavBar = () => {
           </a>
         </li>
         <div className="navbar--menu">
-          {sectionsData.map((sectionId) => (
+          {navData.map((sectionId) => (
             <li key={sectionId}>
               <button
                 onClick={() => scrollToSection(sectionId)}
@@ -78,14 +85,21 @@ const NavBar = () => {
                     ? "navbar--button navbar--button-active"
                     : "navbar--button"
                 }
-                // className="button_slide slide_right"
               >
-                {sectionsIconsData[sectionId]}
+                {navIconsData[sectionId]}
 
                 {/* {sectionId.charAt(0).toUpperCase() + sectionId.slice(1)} */}
               </button>
             </li>
           ))}
+        </div>
+        <div className="navbar--button-mode">
+          <button
+            className={"navbar--button"}
+            onClick={toggleMode}
+          >
+            {lightMode ? navMode.darkMode : navMode.lightMode}
+          </button>
         </div>
       </ul>
     </nav>

@@ -5,50 +5,25 @@
   align-items: center;
 }
 .home--container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+  margin-top: 4rem; /* tamaño del navbar */
 }
-.home--container-frame {
-  margin-top: 4rem;
+
+.home--container-figure {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2); /* Sombra */
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-radius: 10px;
   width: 900px;
-  height: 410px;
-  gap: 2rem;
-  /* position: relative;  */
-  /* Para que los pseudo-elementos se posicionen con respecto a este contenedor */
-
+  gap: 0.5rem;
+  position: relative; /* Establece la posición relativa en la tarjeta */
 }
 
-/* Borde en la esquina superior izquierda */
-/* .home--container-frame::before {
-  content: "";
-  position: absolute;
-  width: 10rem; 
-  height: 10rem;
-  border-left: 8px solid var(--frameColor);
-  border-top: 8px solid var(--frameColor);
-  top: 0;
-  left: 0;
-} */
-
-/* Borde en la esquina inferior derecha */
-/* .home--container-frame::after {
-  content: "";
-  position: absolute;
-  width: 10rem; 
-  height: 10rem;
-  border-right: 8px solid var(--frameColor);
-  border-bottom: 8px solid var(--frameColor);
-  bottom: 0;
-  right: 0;
-} */
+.home--container-left {
+  flex: 40%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
 
 .home--img {
   width: 300px;
@@ -56,30 +31,17 @@
   object-fit: cover;
 }
 
-.home--container-left {
-  display: flex;
-  flex: 50%;
-  justify-content: end;
-  align-items: center;
-}
-
 .home--container-right {
   flex: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .home--container-text {
   font-family: var(--primaryFont);
-  width: 80%;
 }
 
 .home--container-text h6 {
   font-size: var(--fontSubtitleSize);
   font-weight: var(--fontSubtitleWeight);
-  /* margin-bottom: -0.6rem; */
 }
 
 .home--container-text h1 {
@@ -91,4 +53,93 @@
 .home--container-text p {
   font-size: var(--fontParagraphSize);
   font-weight: var(--fontParagraphWeight);
+}
+
+.home--navbar-contact {
+  flex: 10%;
+}
+
+.home--navbar-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  /* background-color: var(--secondaryColorDark); */
+  margin: 1.2rem;
+  gap: 1rem;
+  list-style: none;
+  position: relative;
+}
+
+.home--navbar-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Hace que el elemento sea redondo */
+  padding: 0.4rem;
+}
+.home--navbar-item:hover {
+  background-color: var(--secondaryColorDark);
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in;
+}
+
+.home--navbar-anchor {
+  color: black;
+  height: 24px;
+  width: 24px;
+  padding: 0;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.home--greet {
+  position: absolute; /* Establece la posición absoluta para el icono */
+  bottom: 0;
+  right: 0;
+}
+.home--greet-button {
+  background-color: transparent;
+  color: var(--secondaryColor);
+  cursor: pointer;
+  border: none;
+  padding: 0.2rem;
+}
+
+@media (max-width: 480px) {
+  .home--container {
+    margin-top: 0rem; /* tamaño del navbar */
+  }
+
+  .home--container-figure {
+    width: 350px;
+  }
+
+  .home--container-left {
+    flex: 60%;
+    justify-content: center;
+  }
+  .home--container-right {
+    flex: 40%;
+  }
+  .home--img {
+    width: 100px;
+    height: 200px;
+    margin-top: 0.5rem;
+  }
+  .home--container-text {
+    text-align: center;
+  }
+  .home--navbar-list {
+    gap: 0.4rem;
+  }
+  .home--container-text p {
+    display: none;
+  }
+  .home--greet {
+    display: none;
+  }
 }

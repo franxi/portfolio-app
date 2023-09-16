@@ -1,4 +1,5 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
+import useFadeIn from "../Transition/useFadeIn";
 import { ThemeContext } from "../../context/ThemeContextProvider";
 import { contactData } from "../../data/contactData";
 import EmailIcon from "@mui/icons-material/Email";
@@ -6,11 +7,13 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+
 import "./Contact.css";
 
 const Contact = () => {
   const { theme } = useContext(ThemeContext);
-
+  const cardRef = useRef(null);
+  const isVisible = useFadeIn(cardRef);
   return (
     <section
       className="contact"
@@ -21,7 +24,10 @@ const Contact = () => {
         backgroundSize: theme.backgroundThirdSize,
       }}
     >
-      <article className="contact--container">
+      <article
+        className={`contact--container ${isVisible ? "fadeIn" : ""}`}
+        ref={cardRef}
+      >
         <div
           className="contact--container-main"
           style={{ backgroundColor: theme.secondary }}
@@ -38,39 +44,50 @@ const Contact = () => {
               soluciones digitales bonitas y funcionales que impulsen tu éxito
               en línea.
             </h6>
-            <div className="contact--menu">
-              <a
-                className="contact--menu-item"
-                href={`mailto:${contactData.email}`}
-              >
-                <EmailIcon />
-              </a>
-
-              <a
-                className="contact--menu-item"
-                href={`mailto:${contactData.email}`}
-              >
-                <WhatsAppIcon />
-              </a>
-              <a
-                className="contact--menu-item"
-                href={`mailto:${contactData.email}`}
-              >
-                <InstagramIcon />
-              </a>
-              <a
-                className="contact--menu-item"
-                href={`mailto:${contactData.email}`}
-              >
-                <TwitterIcon />
-              </a>
-              <a
-                className="contact--menu-item"
-                href={`mailto:${contactData.email}`}
-              >
-                <LinkedInIcon />
-              </a>
-            </div>
+            <nav className="contact--navbar-contact">
+              <ul className="contact--navbar-list">
+                <li className="contact--navbar-item">
+                  <a
+                    className="contact--menu-item"
+                    href={`mailto:${contactData.email}`}
+                  >
+                    <EmailIcon />
+                  </a>
+                </li>
+                <li className="contact--navbar-item">
+                  <a
+                    className="contact--menu-item"
+                    href={`mailto:${contactData.email}`}
+                  >
+                    <WhatsAppIcon />
+                  </a>
+                </li>
+                <li className="contact--navbar-item">
+                  <a
+                    className="contact--menu-item"
+                    href={`mailto:${contactData.email}`}
+                  >
+                    <InstagramIcon />
+                  </a>
+                </li>
+                <li className="contact--navbar-item">
+                  <a
+                    className="contact--menu-item"
+                    href={`mailto:${contactData.email}`}
+                  >
+                    <TwitterIcon />
+                  </a>
+                </li>
+                <li className="contact--navbar-item">
+                  <a
+                    className="contact--menu-item"
+                    href={`mailto:${contactData.email}`}
+                  >
+                    <LinkedInIcon />
+                  </a>
+                </li>
+              </ul>
+            </nav>
 
             {/* <p>{contactData.phone}</p>
           <p>{contactData.address}</p> */}

@@ -1,11 +1,13 @@
 import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from "@mui/icons-material/Person";
 import SchoolIcon from "@mui/icons-material/School";
-import CodeIcon from '@mui/icons-material/Code';
+import CodeIcon from "@mui/icons-material/Code";
 // import IntegrationInstructionsIcon from "@mui/icons-material/IntegrationInstructions";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LightModeIcon from "@mui/icons-material/LightMode";
 
-export const sectionsIconsData = {
+export const navIconsData = {
   inicio: <HomeIcon />,
   perfil: <PersonIcon />,
   educación: <SchoolIcon />,
@@ -14,7 +16,12 @@ export const sectionsIconsData = {
   contacto: <ContactPageIcon />,
 };
 
-export const sectionsData = [
+export const navMode = {
+  darkMode: <DarkModeIcon />,
+  lightMode: <LightModeIcon />,
+};
+
+export const navData = [
   "inicio",
   "perfil",
   "educación",

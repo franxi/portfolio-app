@@ -4,14 +4,11 @@
   --primaryFont: "Crimson Text", serif;
   /* --primaryFont: 'Montserrat', sans-serif; */
   /* --primaryFont: 'Raleway', sans-serif; */
+
   /* Tamaño de los textos */
-  
+
   --fontTitleSize: 2.5rem;
   --fontTitleWeight: 700;
-  
-  /* font-size: var(--fontTitleSize);
-  font-weight: var(--fontTitleWeight); */
-
 
   --fontSubtitleSize: 1.25rem;
   --fontSubtitleWeight: 600;
@@ -19,23 +16,41 @@
   --fontSmallTitleSize: 1rem;
   --fontSmallTitleWeight: 400;
 
-  /* font-size: var(--fontSubtitleSize);
-  font-weight: var(--fontSubtitleWeight); */
-
   --fontParagraphSize: 1.15rem;
   --fontParagraphWeight: 400;
 
   --marginTitle: 1.4rem;
-  /* margin-top: var(--marginParagraph); 
-  font-size: var(--fontParagraphSize);
-  font-weight: var(--fontParagraphWeight); */
 
-  --primaryColor:#FFCA28;
-  --primaryColorDark:#FFC506;
-  --secondaryColor: #F1F1F1;
-  --secondaryColorDark: #E0E0E0;
+  /* Colores */
+
+  --primaryColor: #ffca28;
+  --primaryColorDark: #ffc506;
+  --secondaryColor: #f1f1f1;
+  --secondaryColorDark: #e0e0e0;
   --frameColor: #000000;
 }
 /* 
 font-family: 'Crimson Text', serif;
 font-family: 'Patrick Hand SC', cursive; */
+
+/* Tamaños de fuentes para tabletas */
+@media (max-width: 768px) {
+  :root {
+    --fontTitleSize: 2rem;
+    --fontSubtitleSize: 1rem;
+    --fontSmallTitleSize: 0.875rem;
+    --fontParagraphSize: 1rem;
+    --marginTitle: 1rem;
+  }
+}
+
+/* Tamaños de fuentes para dispositivos móviles */
+@media (max-width: 480px) {
+  :root {
+    --fontTitleSize: 1.5rem;
+    --fontSubtitleSize: 0.875rem;
+    --fontSmallTitleSize: 0.75rem;
+    --fontParagraphSize: 0.875rem;
+    --marginTitle: 0.75rem;
+  }
+}
